@@ -5,8 +5,10 @@ class Bishop {
     }
 
     validateMove(move) {
+        const dx = Math.abs(move.sourceX - move.destinationX);
+        const dy = Math.abs(move.sourceY - move.destinationY);
         
-        // dokoncz implementacje
-        return false;
+        // Goniec rusza się po przekątnej (zmiana X równa zmianie Y) i musi wykonać ruch
+        return dx === dy && dx !== 0;
     }
 }
